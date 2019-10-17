@@ -12,12 +12,17 @@ class Complex:
     re : float = 0
     im : float = 0
 
-    def __init__(self, re = 0, im = 0):
+    def __init__(self, re :float = 0, im : float = 0):
         self.re = re
+        """real part"""
         self.im = im
 
     def __add__(self, other):
-        """суммирует два комплексных числа"""
+        """суммирует два комплексных числа
+        
+        Return
+            Complex : the sum of two number
+        """
         return Complex(self.re + other.re, self.im + other.im)
 
     def __sub__(self, other):
